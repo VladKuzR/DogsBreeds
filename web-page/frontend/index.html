@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Breed Prediction</title>
+    <link rel="stylesheet" href="../../../../assets/css/johndoe.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <img id="loader" src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/abfa05c49acf005b8b1e0ef8eb25a67a7057eb20/svg-css/blocks-wave.svg" alt="" >
+    <section class="container">
+        
+        <h1>Dog Breed Prediction</h1>
+        <p class="init_p">Welcome to our dog breed prediction tool. Upload a photo of a dog, and we'll predict its breed!</p>
+        <hr>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input class="btn-primary btn-lg" name="file" type="file" id="photoInput" accept="image/*" hidden>
+            <label id="file-upload_id" class="file-upload" for="photoInput">Just upload the photo of your dog here to see the Magic!</label>
+            <button id="delete_button" class="btn btn-outline-primary" type="button" disabled>Delete Photo</button>
+            <button class="btn btn-primary btn_submit" id="btn_submit" type="submit" disabled>Submit Photo</button>
+        </form>
+        <p id="predictionResult">Prediction will appear here</p>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>
