@@ -1,121 +1,121 @@
-,class_name,f1-score
-88,Pug,1.0
-92,Saint Bernard,1.0
-18,Borzoi,1.0
-1,Afghan hound,1.0
-22,Brabancon griffon,1.0
-62,Keeshond,1.0
-2,African hunting dog,1.0
-69,Leonberg,0.9949748743718593
-84,Papillon,0.9947643979057591
-10,Bedlington terrier,0.993939393939394
-64,Kerry blue terrier,0.9937106918238994
-56,Irish setter,0.9909909909909909
-94,Samoyed,0.99009900990099
-21,Boxer,0.99009900990099
-87,Pomeranian,0.99
-115,Welsh springer spaniel,0.98989898989899
-36,Dhole,0.98989898989899
-80,Norwegian elkhound,0.9895833333333334
-30,Chow,0.9894736842105264
-116,West Highland white terrier,0.9855072463768116
-82,Old English sheepdog,0.9852941176470589
-93,Saluki,0.9850746268656716
-13,Blenheim spaniel,0.983050847457627
-55,Ibizan hound,0.9826589595375723
-14,Bloodhound,0.9824561403508771
-65,Komondor,0.9818181818181818
-74,Mexican hairless,0.9814814814814815
-24,Brittany spaniel,0.9807692307692307
-47,German short-haired pointer,0.9807692307692307
-50,Gordon setter,0.9807692307692307
-54,Groenendael,0.9803921568627451
-49,Golden retriever,0.98
-85,Pekinese,0.98
-17,Border terrier,0.9793103448275863
-40,English setter,0.975609756097561
-7,Basenji,0.9753694581280788
-12,Black-and-tan coonhound,0.9752066115702479
-114,Weimaraner,0.9752066115702478
-96,Scotch terrier,0.9743589743589743
-25,Bull mastiff,0.972972972972973
-51,Great Dane,0.972972972972973
-95,Schipperke,0.9714285714285714
-31,Clumber,0.970873786407767
-73,Maltese dog,0.9705882352941176
-91,Rottweiler,0.9702970297029703
-58,Irish water spaniel,0.9702970297029702
-28,Chesapeake Bay retriever,0.9701492537313433
-38,Doberman,0.9696969696969697
-72,Malinois,0.9696969696969697
-8,Basset,0.9668874172185431
-3,Airedale,0.9655172413793104
-60,Italian greyhound,0.9642857142857143
-78,Newfoundland,0.9633507853403142
-26,Cairn,0.963350785340314
-34,Curly-coated retriever,0.9615384615384616
-0,Affenpinscher,0.9615384615384615
-52,Great Pyrenees,0.9595959595959594
-75,Miniature pinscher,0.95906432748538
-68,Lakeland terrier,0.9587628865979382
-61,Japanese spaniel,0.9580838323353293
-45,French bulldog,0.957983193277311
-15,Bluetick,0.9571428571428571
-32,Cocker spaniel,0.9565217391304348
-11,Bernese mountain dog,0.9560975609756097
-35,Dandie Dinmont,0.9554140127388535
-112,Vizsla,0.954954954954955
-63,Kelpie,0.9532710280373832
-23,Briard,0.9514563106796117
-41,English springer,0.9508196721311476
-19,Boston bull,0.9506172839506174
-57,Irish terrier,0.9503546099290779
-67,Labrador retriever,0.9503546099290779
-20,Bouvier des Flandres,0.9494949494949495
-107,Sussex spaniel,0.9494949494949494
-37,Dingo,0.9482758620689654
-117,Whippet,0.9473684210526316
-89,Redbone,0.9473684210526315
-59,Irish wolfhound,0.9468599033816426
-98,Sealyham terrier,0.9463414634146342
-46,German shepherd,0.9433962264150944
-97,Scottish deerhound,0.9430051813471503
-111,Toy terrier,0.9428571428571428
-66,Kuvasz,0.9387755102040817
-48,Giant schnauzer,0.9380530973451328
-86,Pembroke,0.9375000000000001
-103,Soft-coated wheaten terrier,0.9369369369369368
-71,Malamute,0.9358974358974359
-29,Chihuahua,0.9345794392523366
-108,Tibetan mastiff,0.9333333333333333
-109,Tibetan terrier,0.9313725490196078
-105,Standard poodle,0.9285714285714285
-44,Flat-coated retriever,0.9245283018867925
-42,EntleBucher,0.9238578680203046
-90,Rhodesian ridgeback,0.9230769230769231
-99,Shetland sheepdog,0.9152542372881356
-53,Greater Swiss Mountain dog,0.9147286821705426
-9,Beagle,0.91005291005291
-81,Norwich terrier,0.9058823529411765
-119,Yorkshire terrier,0.9037037037037037
-83,Otterhound,0.9
-77,Miniature schnauzer,0.897196261682243
-27,Cardigan,0.8928571428571428
-100,Shih-Tzu,0.8808290155440415
-118,Wire-haired fox terrier,0.8807339449541285
-79,Norfolk terrier,0.875
-5,Appenzeller,0.8627450980392157
-70,Lhasa,0.8620689655172414
-16,Border collie,0.8571428571428572
-104,Staffordshire bullterrier,0.8545454545454545
-6,Australian terrier,0.8524590163934426
-102,Silky terrier,0.8433734939759037
-106,Standard schnauzer,0.8363636363636363
-4,American Staffordshire terrier,0.828125
-39,English foxhound,0.7927927927927928
-76,Miniature poodle,0.7826086956521738
-113,Walker hound,0.7747747747747747
-110,Toy poodle,0.7692307692307692
-33,Collie,0.7551020408163266
-101,Siberian husky,0.7222222222222222
-43,Eskimo dog,0.5142857142857142
+class_name,f1-score
+Bedlington terrier,1
+Saint Bernard,1
+Borzoi,1
+Pug,1
+Brabancon griffon,1
+Keeshond,1
+African hunting dog,1
+Afghan hound,1
+Leonberg,0.994974874
+Papillon,0.994764398
+Kerry blue terrier,0.993710692
+Irish setter,0.990990991
+Samoyed,0.99009901
+Boxer,0.99009901
+Pomeranian,0.99
+Welsh springer spaniel,0.98989899
+Dhole,0.98989899
+Norwegian elkhound,0.989583333
+Chow,0.989473684
+West Highland white terrier,0.985507246
+Old English sheepdog,0.985294118
+Saluki,0.985074627
+Blenheim spaniel,0.983050847
+Ibizan hound,0.98265896
+Bloodhound,0.98245614
+Komondor,0.981818182
+Mexican hairless,0.981481481
+Brittany spaniel,0.980769231
+German short-haired pointer,0.980769231
+Gordon setter,0.980769231
+Groenendael,0.980392157
+Golden retriever,0.98
+Pekinese,0.98
+Border terrier,0.979310345
+English setter,0.975609756
+Basenji,0.975369458
+Black-and-tan coonhound,0.975206612
+Weimaraner,0.975206612
+Scotch terrier,0.974358974
+Bull mastiff,0.972972973
+Great Dane,0.972972973
+Schipperke,0.971428571
+Clumber,0.970873786
+Maltese dog,0.970588235
+Rottweiler,0.97029703
+Irish water spaniel,0.97029703
+Chesapeake Bay retriever,0.970149254
+Doberman,0.96969697
+Malinois,0.96969697
+Basset,0.966887417
+Airedale,0.965517241
+Italian greyhound,0.964285714
+Lakeland terrier,0.96373057
+Newfoundland,0.963350785
+Cairn,0.963350785
+Curly-coated retriever,0.961538462
+Affenpinscher,0.961538462
+Great Pyrenees,0.95959596
+Miniature pinscher,0.959064327
+Japanese spaniel,0.958083832
+French bulldog,0.957983193
+Bluetick,0.957142857
+Cocker spaniel,0.956521739
+Bernese mountain dog,0.956097561
+Dandie Dinmont,0.955414013
+Vizsla,0.954954955
+Kelpie,0.953271028
+Briard,0.951456311
+English springer,0.950819672
+Boston bull,0.950617284
+Labrador retriever,0.95035461
+Irish terrier,0.95035461
+Bouvier des Flandres,0.949494949
+Sussex spaniel,0.949494949
+Dingo,0.948275862
+Whippet,0.947368421
+Redbone,0.947368421
+Irish wolfhound,0.946859903
+Sealyham terrier,0.946341463
+German shepherd,0.943396226
+Scottish deerhound,0.943005181
+Toy terrier,0.942857143
+Kuvasz,0.93877551
+Standard poodle,0.938053097
+Pembroke,0.9375
+Soft-coated wheaten terrier,0.936936937
+Malamute,0.935897436
+Chihuahua,0.934579439
+Tibetan mastiff,0.933333333
+Tibetan terrier,0.931372549
+Giant schnauzer,0.928571429
+Flat-coated retriever,0.924528302
+EntleBucher,0.923857868
+Rhodesian ridgeback,0.923076923
+Shetland sheepdog,0.915254237
+Greater Swiss Mountain dog,0.914728682
+Beagle,0.91005291
+Norwich terrier,0.905882353
+Otterhound,0.9
+Miniature schnauzer,0.897196262
+Yorkshire terrier,0.895522388
+Cardigan,0.892857143
+Shih-Tzu,0.880829016
+Norfolk terrier,0.875
+Wire-haired fox terrier,0.872727273
+Appenzeller,0.862745098
+Lhasa,0.862068966
+Staffordshire bullterrier,0.854545455
+Australian terrier,0.852459016
+Border collie,0.843137255
+Silky terrier,0.838323353
+Standard schnauzer,0.828828829
+American Staffordshire terrier,0.828125
+English foxhound,0.785714286
+Miniature poodle,0.771929825
+Walker hound,0.763636364
+Toy poodle,0.761904762
+Collie,0.752475248
+Siberian husky,0.726256983
+Eskimo dog,0.528301887
