@@ -19,14 +19,18 @@ document.addEventListener("DOMContentLoaded", (event) => {
     
     window.addEventListener('resize', setVh);
 
-
+    if(localStorage.getItem('first_time') == 'false'){
+        question_mark.classList.add('no-before')
+    }
 
     
-    question_mark.addEventListener('click', () => {
+    question_mark.addEventListener('click', function () {
         info_sheet.style.display = 'block';
+        this.classList.add('no-before');
         setTimeout(() => {
             info_sheet.style.opacity = 1;
         }, 0);
+        localStorage.setItem('first_time', false)
     });
     
 
@@ -62,120 +66,122 @@ document.addEventListener("DOMContentLoaded", (event) => {
   
     });
   
-    // uploadForm.addEventListener('submit', (e) => {
-    //     e.preventDefault();
-    //     loader.style.display = 'flex';
-    //     submitButton.disabled = true; 
-    //     if (photoUpload.files.length > 0) {
-    //         const file = photoUpload.files[0];
+//     uploadForm.addEventListener('submit', (e) => {
+//         e.preventDefault();
+//         loader.style.display = 'flex';
+//         submitButton.disabled = true; 
+//         if (photoUpload.files.length > 0) {
+//             const file = photoUpload.files[0];
     
-    //         const reader = new FileReader();
-    //         reader.onload = () => {
-    //             const base64Data = btoa(reader.result);
+//             const reader = new FileReader();
+//             reader.onload = () => {
+//                 const base64Data = btoa(reader.result);
     
-    //             fetch('https://vlad-ds.pro/pred', {
-    //                 method: 'POST',
-    //                 headers: {
-    //                     'Content-Type': 'application/json'
-    //                 },
-    //                 body: JSON.stringify({ file: base64Data })
-    //             })
-    //             .then(response => response.json())
-    //             .then(data => {
-    //                 console.log('Response from server:', data);
-    //                 loader.style.display = 'none';
-    //                 predictionResult.style.display = 'flex';
-    //                 predictionResult.innerHTML = 'The prediction is <br/><b>' + data['prediction'] + '</b>';
-    //                 submitButton.disabled = false;
-    //             })
-    //             .catch(error => {
-    //                 console.error('Error uploading file:', error);
-    //                 submitButton.disabled = false;
-    //             });
-    //         };
-    //         reader.readAsBinaryString(file);
-    //     } else {
-    //         alert('Please upload a photo of your dog.');
-    //         submitButton.disabled = false;
-    //     }
-    // });
+//                 fetch('https://vlad-ds.pro/pred', {
+//                     method: 'POST',
+//                     headers: {
+//                         'Content-Type': 'application/json'
+//                     },
+//                     body: JSON.stringify({ file: base64Data })
+//                 })
+//                 .then(response => response.json())
+//                 .then(data => {
+//                     console.log('Response from server:', data);
+//                     loader.style.display = 'none';
+//                     predictionResult.style.display = 'flex';
+//                     predictionResult.innerHTML = 'The prediction is <br/><b>' + data['prediction'] + '</b>';
+//                     submitButton.disabled = false;
+//                 })
+//                 .catch(error => {
+//                     console.error('Error uploading file:', error);
+//                     submitButton.disabled = false;
+//                 });
+//             };
+//             reader.readAsBinaryString(file);
+//         } else {
+//             alert('Please upload a photo of your dog.');
+//             submitButton.disabled = false;
+//         }
+//     });
 
-    uploadForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        loader.style.display = 'flex';
-        submitButton.disabled = true; 
-        if (photoUpload.files.length > 0) {
-            const file = photoUpload.files[0];
-    
-            // Log original file size
-            console.log('Original file size:', file.size, 'bytes');
-    
-            const img = new Image();
-            img.onload = function() {
-                console.log('Original dimensions:', img.width, 'x', img.height);
-    
-                let canvas = document.createElement('canvas');
-                let ctx = canvas.getContext('2d');
-                let newWidth, newHeight;
-    
-                // Check if the image needs compression
-                if (img.width > 1024 || img.height > 1024 || file.size > 1000000) {
-                    // Resize the image
-                    const aspectRatio = img.width / img.height;
-                    if (img.width > img.height) {
-                        newWidth = Math.min(img.width, 1024);
-                        newHeight = newWidth / aspectRatio;
-                    } else {
-                        newHeight = Math.min(img.height, 1024);
-                        newWidth = newHeight * aspectRatio;
-                    }
+
+//   });
+
+uploadForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    loader.style.display = 'flex';
+    submitButton.disabled = true; 
+    if (photoUpload.files.length > 0) {
+        const file = photoUpload.files[0];
+
+        // Log original file size
+        console.log('Original file size:', file.size, 'bytes');
+
+        const img = new Image();
+        img.onload = function() {
+            console.log('Original dimensions:', img.width, 'x', img.height);
+
+            let canvas = document.createElement('canvas');
+            let ctx = canvas.getContext('2d');
+            let newWidth, newHeight;
+
+            // Check if the image needs compression
+            if (img.width > 1024 || img.height > 1024 || file.size > 1000000) {
+                // Resize the image
+                const aspectRatio = img.width / img.height;
+                if (img.width > img.height) {
+                    newWidth = Math.min(img.width, 1024);
+                    newHeight = newWidth / aspectRatio;
                 } else {
-                    // Keep original dimensions if the image is small
-                    newWidth = img.width;
-                    newHeight = img.height;
+                    newHeight = Math.min(img.height, 1024);
+                    newWidth = newHeight * aspectRatio;
                 }
-    
-                canvas.width = newWidth;
-                canvas.height = newHeight;
-                ctx.drawImage(img, 0, 0, newWidth, newHeight);
-    
-                canvas.toBlob((blob) => {
-                    console.log('New file size:', blob.size, 'bytes');
-                    console.log('New dimensions:', newWidth, 'x', newHeight);
-    
-                    const reader = new FileReader();
-                    reader.onload = () => {
-                        const base64Data = btoa(reader.result);
-    
-                        fetch('https://vlad-ds.pro/pred', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json'
-                            },
-                            body: JSON.stringify({ file: base64Data })
-                        })
-                        .then(response => response.json())
-                        .then(data => {
-                            console.log('Response from server:', data);
-                            loader.style.display = 'none';
-                            predictionResult.style.display = 'flex';
-                            predictionResult.innerHTML = 'The prediction is <br/><b>' + data['prediction'] + '</b>';
-                            submitButton.disabled = false;
-                        })
-                        .catch(error => {
-                            console.error('Error uploading file:', error);
-                            submitButton.disabled = false;
-                        });
-                    };
-                    reader.readAsBinaryString(blob);
-                }, 'image/jpeg', 0.8); // Adjust quality as needed
-            };
-            img.src = URL.createObjectURL(file);
-        } else {
-            alert('Please upload a photo of your dog.');
-            submitButton.disabled = false;
-        }
-    });
+            } else {
+                // Keep original dimensions if the image is small
+                newWidth = img.width;
+                newHeight = img.height;
+            }
 
+            canvas.width = newWidth;
+            canvas.height = newHeight;
+            ctx.drawImage(img, 0, 0, newWidth, newHeight);
 
-  });
+            canvas.toBlob((blob) => {
+                console.log('New file size:', blob.size, 'bytes');
+                console.log('New dimensions:', newWidth, 'x', newHeight);
+
+                const reader = new FileReader();
+                reader.onload = () => {
+                    const base64Data = btoa(reader.result);
+
+                    fetch('https://vlad-ds.pro/pred', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ file: base64Data })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('Response from server:', data);
+                        loader.style.display = 'none';
+                        predictionResult.style.display = 'flex';
+                        predictionResult.innerHTML = 'The prediction is <br/><b>' + data['prediction'] + '</b>';
+                        submitButton.disabled = false;
+                    })
+                    .catch(error => {
+                        console.error('Error uploading file:', error);
+                        submitButton.disabled = false;
+                    });
+                };
+                reader.readAsBinaryString(blob);
+            }, 'image/jpeg', 0.8); 
+        };
+        img.src = URL.createObjectURL(file);
+    } else {
+        alert('Please upload a photo of your dog.');
+        submitButton.disabled = false;
+    }
+});
+
+});
