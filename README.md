@@ -1,6 +1,8 @@
 # Dog Breed Prediction
 
-Welcome to the Dog Breed Prediction tool! This project uses deep learning to predict the breed of a dog from an uploaded photo. The model is trained on the Stanford Dog Breed dataset and employs various techniques such as classic convolutional networks, data augmentation, hyperparameter tuning, and transfer learning.
+Welcome to the Dog Breed Prediction tool! This project uses deep learning to predict the breed of a dog from an uploaded photo. The model is trained on the Stanford Dog Breed dataset and employs various techniques such as classic convolutional networks, data augmentation, hyperparameter tuning, and transfer learning. 
+
+You can find the working Web Application here: https://vlad-ds.pro/dog_breeds/.
 
 ## Table of Contents
 - [Features](#features)
@@ -130,7 +132,7 @@ The project includes various evaluation techniques to assess model performance:
 
 - **Data Exploration:** Detailed exploration of the dataset to understand its characteristics.
 - **Confusion Matrix:** Used to evaluate the accuracy of the model and identify breeds that are often confused.
-  ![download (2)](https://github.com/VladKuzR/DogsBreeds/assets/123952016/904fdbdd-4b53-4498-bc7e-9d69e4791cfb)
+![download (2)](https://github.com/VladKuzR/DogsBreeds/assets/123952016/904fdbdd-4b53-4498-bc7e-9d69e4791cfb)
 
 - **Performance Metrics:** Key metrics such as accuracy, precision, recall, and F1-score were calculated to measure the model's performance.
 - **F1-score Chart:** This comprehensive chart shows the weighted average of precision and recall per category.
