@@ -130,7 +130,11 @@ The project includes various evaluation techniques to assess model performance:
 
 - **Data Exploration:** Detailed exploration of the dataset to understand its characteristics.
 - **Confusion Matrix:** Used to evaluate the accuracy of the model and identify breeds that are often confused.
+  ![download (2)](https://github.com/VladKuzR/DogsBreeds/assets/123952016/904fdbdd-4b53-4498-bc7e-9d69e4791cfb)
+
 - **Performance Metrics:** Key metrics such as accuracy, precision, recall, and F1-score were calculated to measure the model's performance.
+- **F1-score Chart:** This comprehensive chart shows the weighted average of precision and recall per category.
+![download (3)](https://github.com/VladKuzR/DogsBreeds/assets/123952016/19f056b3-5e7d-4bc0-bfdc-ca5f7c49a564)
 
 ### Acknowledgments
 
