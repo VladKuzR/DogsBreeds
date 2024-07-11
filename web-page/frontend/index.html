@@ -1,74 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dog Breed Prediction</title>
     <link rel="stylesheet" href="../../../../assets/css/johndoe.css">
     <link rel="stylesheet" href="styles.css?v1.1">
-</head>
-<body>
-
+  </head>
+  <body>
     <section class="container">
-        <div class="progress", id="loader">
-            <div class="progress-value"></div>
-          </div>
-        
-        <h1 class="page_header">Dog Breed Prediction <button class="question_mark" id="question_mark"></button></h1>
-        <p class="init_p">Welcome to my dog breed prediction tool. <br>Upload a photo of a dog, and we'll predict its breed! <br> 
-        For more Information <i>click the Question Mark above!</i></p>
-        <form id="uploadForm" enctype="multipart/form-data">
-            <input class="btn-primary btn-lg" name="file" type="file" id="photoInput" accept="image/*" hidden>
-            <label id="file-upload_id" class="file-upload" for="photoInput">Just upload the photo of your dog here to see the Magic!</label>
-            <button id="delete_button" class="btn btn-outline-primary" type="button" disabled>Delete Photo</button>
-            <button class="btn btn-primary btn_submit" id="btn_submit" type="submit" disabled>Submit Photo</button>
-        </form>
-        <p id="predictionResult">Prediction will appear here</p>
+      <div class="progress" , id="loader">
+        <div class="progress-value"></div>
+      </div>
+      <h1 class="page_header">Dog Breed Prediction <button class="question_mark" id="question_mark"></button>
+      </h1>
+      <p class="init_p">Welcome to my dog breed prediction tool. <br>Upload a photo of a dog, and we'll predict its breed! <br> For more Information <i>click the Question Mark above!</i>
+      </p>
+      <form id="uploadForm" enctype="multipart/form-data">
+        <input class="btn-primary btn-lg" name="file" type="file" id="photoInput" accept="image/*" hidden>
+        <label id="file-upload_id" class="file-upload" for="photoInput">Just upload the photo of your dog here to see the Magic!</label>
+        <button id="delete_button" class="btn btn-outline-primary" type="button" disabled>Delete Photo</button>
+        <button class="btn btn-primary btn_submit" id="btn_submit" type="submit" disabled>Submit Photo</button>
+      </form>
+      <p id="predictionResult">Prediction will appear here</p>
     </section>
-    <div id="info_sheet"> <button class="cross_btn" id="cross_btn"></button>
-        <h3 class="important_info_heading">Important Information</h3>
-        <p class="info_paragraph">Good afternoon. I'm glad you're here! <br> <br>
-            Now, I will tell you more about this project and answer some Frequently Asked Questions. I made this project to represent my proficiency in Computer Vision. <br>
-            I've posted the code version  <a href="" class="colab_link">here</a> so that you can try yourself as a CV developer and read all my thoughts while I'm trying different approaches and tips for Computer Vision.
-            <br><br>
-            This model was trained using <a href="http://vision.stanford.edu/aditya86/ImageNetDogs/">Stanford Dogs Dataset</a> which has 20,580 pictures of 120 kinds of dogs! (That's a lot, isn't it?) <br>
-            Its creators reached an accuracy of about 22% while using 100 images in each training class. I have reached about <b>95% of accuracy</b>, using a Deep Neural Network!
-            The dataset includes photos of only 120 breeds.Therefore, this program can accurately predict your dog's breed only if it is in the dataset. Essentially, the model selects the breed the dog in your photo most closely resembles from the breeds it has seen before. <br><br>
-            This is the first version of this model. In the second version, I will find photos of all recognized breeds and train my model on them! <br><br>
-            But so far, for the best results:
-            <ul>
-                <li>The breed of the dog should be pure</li>
-                <li>The dog better be fully depicted in the image (Although it works even with parts of the dog in the picture)</li>
-                <li>The photo better be well-lit</li>
-                <li>Nothing should come between the camera and the dog</li>
-            </ul>
-
-            P.S.Also, I hope you like the design:) I created it myself (I'm not a designer), ensuring it's responsive so you can enjoy it on both your PC and your phone. I worked quickly on it because it's not the main feature of this page.
-
-
-        </p>
-        <h3 class="important_info_heading">FAQ</h3>
-        <h4 class="faq_question"><b>Question:</b> Why does it take so long to predict the breed?</h4>
-        <p class="info_paragraph"><b>Answer:</b> As I am trying to keep my expenses at a minimum, I have this hosting with relatively weak computing power, without GPU support. In real applications, prediction is instant.</p>
-        <h4 class="faq_question"><b>Question:</b> Is it safe to upload photos?</h4>
-        <p class="info_paragraph"><b>Answer:</b> Absolutely! I use the TSL protocol that protects your photos on the Internet. Also, after making a prediction, the server instantly deletes photos, and I do not receive/see/use them for training my Version 2 network.</p>
-        <h4 class="faq_question"><b>Question:</b> Can it Predict Mixed Breeds?</h4>
-        <p class="info_paragraph"><b>Answer:</b> It prediscovers only purebreds, but if at least one of the breeds that make up the mix of a specific dog is present in the dataset, my model will likely predict it correctly.</p>
-        <h4 class="faq_question"><b>Question:</b> Can it Predict Cats?</h4>
-        <p class="info_paragraph"><b>Answer:</b> No, it cannot predict cats, birds, flowers, trees, etc. But if you have an idea for a useful application, please get in touch with me <a href="https://vlad-ds.pro/">via the form on my website.</a></p>
-        <h4 class="faq_question"><b>Question:</b> Why it did not predict my dog correctly?</h4>
-        <p class="info_paragraph"><b>Answer:</b> This model correctly predicts the dog breeds listed below on the graph! If your dog is not here, it will most likely come with the 2.0 version of my application!</p>
-        <h4 class="faq_question"><b>Question:</b> Which breeds can it predict?</h4>
-        <p class="info_paragraph"><b>Answer:</b> I've trained a model using a dataset that contains 120 different dog breeds. I'll list the breeds and show how well the model performed for each one using a measure called F1-score. F1-score is like a game score that shows how well a model makes correct predictions and avoids mistakes at the same time.</p>
-        <p class="info_paragraph">As you can see, my model handles almost all the breeds very well (some of them are absolutely without mistakes!). The weakest point is the Eskimo Dog versus the Siberian Haski. As I am not a dog handler, it is hard for me to distinguish them (and, apparently, for my model)...</p>
-        <h4 class="faq_question"><b>Question:</b> How did you train it?</h4>
-        <p class="info_paragraph"><b>Answer:</b> You can check the entire process <a href="https://github.com/VladKuzR/DogsBreeds">in my GitHub repository!</a></p>
-
-        <div id="my_dataviz"></div>
-        <p class="info_paragraph" style="text-align: center"><b>Thank you for your attention! I truly appreciate your time spent on my website. If you liked it, please share your feedback <a href="https://www.linkedin.com/in/vl-kuz/">on my LinkedIn!</a></b></p>
+    <div id="info_sheet">
+      <button class="cross_btn" id="cross_btn"></button>
+      <h3 class="important_info_heading">Important Information</h3>
+      <p class="info_paragraph">Good afternoon. I'm glad you're here! <br>
+        <br> Now, I will tell you more about this project and answer some Frequently Asked Questions. I made this project to represent my proficiency in Computer Vision. <br> I've posted the code version  <a href="" class="colab_link">here</a> so that you can try yourself as a CV developer and read all my thoughts while I'm trying different approaches and tips for Computer Vision. <br>
+        <br> This model was trained using <a href="http://vision.stanford.edu/aditya86/ImageNetDogs/">Stanford Dogs Dataset</a> which has 20,580 pictures of 120 kinds of dogs! (That's a lot, isn't it?) <br> Its creators reached an accuracy of about 22% while using 100 images in each training class. I have reached about <b>95% of accuracy</b>, using a Deep Neural Network! The dataset includes photos of only 120 breeds.Therefore, this program can accurately predict your dog's breed only if it is in the dataset. Essentially, the model selects the breed the dog in your photo most closely resembles from the breeds it has seen before. <br>
+        <br> This is the first version of this model. In the second version, I will find photos of all recognized breeds and train my model on them! <br>
+        <br> But so far, for the best results:
+      <ul>
+        <li>The breed of the dog should be pure</li>
+        <li>The dog better be fully depicted in the image (Although it works even with parts of the dog in the picture)</li>
+        <li>The photo better be well-lit</li>
+        <li>Nothing should come between the camera and the dog</li>
+      </ul> P.S.Also, I hope you like the design:) I created it myself (I'm not a designer), ensuring it's responsive so you can enjoy it on both your PC and your phone. I worked quickly on it because it's not the main feature of this page. </p>
+      <h3 class="important_info_heading">FAQ</h3>
+      <h4 class="faq_question">
+        <b>Question:</b> Why does it take so long to predict the breed?
+      </h4>
+      <p class="info_paragraph">
+        <b>Answer:</b> As I am trying to keep my expenses at a minimum, I have this hosting with relatively weak computing power, without GPU support. In real applications, prediction is instant.
+      </p>
+      <h4 class="faq_question">
+        <b>Question:</b> Is it safe to upload photos?
+      </h4>
+      <p class="info_paragraph">
+        <b>Answer:</b> Absolutely! I use the TSL protocol that protects your photos on the Internet. Also, after making a prediction, the server instantly deletes photos, and I do not receive/see/use them for training my Version 2 network.
+      </p>
+      <h4 class="faq_question">
+        <b>Question:</b> Can it Predict Mixed Breeds?
+      </h4>
+      <p class="info_paragraph">
+        <b>Answer:</b> It prediscovers only purebreds, but if at least one of the breeds that make up the mix of a specific dog is present in the dataset, my model will likely predict it correctly.
+      </p>
+      <h4 class="faq_question">
+        <b>Question:</b> Can it Predict Cats?
+      </h4>
+      <p class="info_paragraph">
+        <b>Answer:</b> No, it cannot predict cats, birds, flowers, trees, etc. But if you have an idea for a useful application, please get in touch with me <a href="https://vlad-ds.pro/">via the form on my website.</a>
+      </p>
+      <h4 class="faq_question">
+        <b>Question:</b> Why it did not predict my dog correctly?
+      </h4>
+      <p class="info_paragraph">
+        <b>Answer:</b> This model correctly predicts the dog breeds listed below on the graph! If your dog is not here, it will most likely come with the 2.0 version of my application!
+      </p>
+      <h4 class="faq_question">
+        <b>Question:</b> Which breeds can it predict?
+      </h4>
+      <p class="info_paragraph">
+        <b>Answer:</b> I've trained a model using a dataset that contains 120 different dog breeds. I'll list the breeds and show how well the model performed for each one using a measure called F1-score. F1-score is like a game score that shows how well a model makes correct predictions and avoids mistakes at the same time.
+      </p>
+      <p class="info_paragraph">As you can see, my model handles almost all the breeds very well (some of them are absolutely without mistakes!). The weakest point is the Eskimo Dog versus the Siberian Haski. As I am not a dog handler, it is hard for me to distinguish them (and, apparently, for my model)...</p>
+      <h4 class="faq_question">
+        <b>Question:</b> How did you train it?
+      </h4>
+      <p class="info_paragraph">
+        <b>Answer:</b> You can check the entire process <a href="https://github.com/VladKuzR/DogsBreeds">in my GitHub repository!</a>
+      </p>
+      <div id="my_dataviz"></div>
+      <p class="info_paragraph" style="text-align: center">
+        <b>Thank you for your attention! I truly appreciate your time spent on my website. If you liked it, please share your feedback <a href="https://www.linkedin.com/in/vl-kuz/">on my LinkedIn!</a>
+        </b>
+      </p>
     </div>
     <script src="main.js?v1.3"></script>
     <script src="https://d3js.org/d3.v6.js"></script>
     <script src="graph.js?v1.1"></script>
-</body>
+  </body>
 </html>
